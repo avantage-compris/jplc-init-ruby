@@ -235,6 +235,12 @@ Un peu de manipulation de tableaux :
 
     >> a = [4, 5, 7, 8, 9, 10]
     => [4, 5, 7, 8, 9, 10]
+    >> a[2 .. 5]
+    => [7, 8, 9, 10]
+    >> a[2 ... 5]
+    => [7, 8, 9]
+    >> a[2..-2]
+    => [7, 8, 9]
     >> a.select { |x| x % 2 == 1 }
     => [5, 7, 9]
     >> a
@@ -276,6 +282,8 @@ Un peu de manipulation de tableaux :
     => [[25, 0], [49, 1], [81, 2]]
     >> a.map! { |x| x.first }
     => [25, 49, 81]
+    >> a[-1]
+    => 81
 
 #### 4.2. Fichier sources
 
